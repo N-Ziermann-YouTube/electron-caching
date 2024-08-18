@@ -8,3 +8,11 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <App />
   </React.StrictMode>
 );
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/serviceworker.js', {
+      scope: '/',
+    })
+    .catch((error) => console.error(`Registration failed with ${error}`));
+}

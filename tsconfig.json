@@ -3,9 +3,9 @@
     "types": ["./types"],
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "checkJs": false,
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker"],
+    "allowJs": true,
+    "checkJs": true,
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
@@ -18,7 +18,7 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": ["src", "public/serviceworker.js"],
   "exclude": ["src/electron"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
